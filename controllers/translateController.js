@@ -5,8 +5,9 @@ const User = require('../models/users')
 
 
 var translateFunc = function(req,res,next){
-    // console.log(req.file)
+    console.log(req.file)
     var sentence = req.file.buffer.toString()
+
     // console.log(req.user)
     User.findOne({username : req.user.username}).then((user) => {
         // console.log('user:'+ user)

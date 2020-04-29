@@ -29,7 +29,7 @@ describe('POST /users/newuser',() => {
     }
     it('should create a new user',(done) => {
         request(app)
-            .post('/users/signup')
+            .post('/user/signup')
             .send(user)
             .expect(200)
             .expect((res) => {
@@ -48,7 +48,7 @@ describe('POST /users/newuser',() => {
 
     it('should not create user when username is taken',(done) => {
         request(app)
-            .post('/users/signup')
+            .post('/user/signup')
             .send({
                 username: "milz",
                 password : "no function"
@@ -66,7 +66,7 @@ describe('POST /users/login',() => {
 
     it('should log user in',(done) => {
         request(app)
-            .post('/users/login')
+            .post('/user/login')
             .send({
                 username : "milz",
                 password : "dee"
@@ -86,7 +86,7 @@ describe('POST /users/login',() => {
 
     it('should not login user with wrong password/username',(done) => {
         request(app)
-            .post('/users/login')
+            .post('/user/login')
             .send({
                 username : "milz",
                 password : "tope"

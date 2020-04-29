@@ -48,7 +48,7 @@ var handleError = function(err,req,res,next){
 //error handler middleware
 app.use(handleError)
 //user routes handler
-app.use('/users',userRouter)
+app.use('/user',userRouter)
 
 //translate router
 app.use('/translate',translateRouter)
