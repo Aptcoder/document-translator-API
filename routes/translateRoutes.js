@@ -1,6 +1,6 @@
 const express = require('express');
-var controller = require('../controllers/translate')
-const auth = require('../controllers/auth')
+var controller = require('../controllers/translateController')
+const auth = require('../controllers/authController')
 
 var router = express.Router();
 const multer = require('multer')

@@ -14,8 +14,8 @@ var environment = process.env.NODE_ENV || 'development'
 const stage = require('./config')[environment]; 
 
 //routers 
-var userRouter = require('./routes/user')
-var translateRouter = require('./routes/translate')
+var userRouter = require('./routes/userRoutes')
+var translateRouter = require('./routes/translateRoutes')
 // create express server
 var app = express();
 
